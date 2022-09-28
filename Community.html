@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <title>Community Page</title>
+    <link  href="main.css" rel="stylesheet" type="text/css">
+    <div class="topnav">
+        <a href="homepage.php">Home</a>
+        <a href="project_review.php">Reviews</a>
+        <a class = "active" href="community.html">Community</a>
+        <a href="Settings.php">Settings</a>
+      </div>
+      <br>
+</head>
+<body>
+<h1>Community Page</h1>
+<p>A page that allows you to access community resources!</p>
+<p>View the menu below. From various meats and vegetables to delicious deserts, see all of the delectable food the dining halls have to offer. Remember to write a review after you try it!</p>
+<a href="https://dining.uga.edu/build-your-plate/" class="build"><button class ="build" ><b>Build Your Plate</b></button></a>
+<p>Have any questions for the staff? Here you can contact the dining halls and view meal plans.</p>
+<a href = "https://dining.uga.edu/about/contact/" class="contact"><button class = "contact"><b>Contact</b></button></a>
+<a href = "https://dining.uga.edu/meal-plans/about/" class ="meal"><button class = "meal"><b>Meal Plan</b></button></a>
+
+<br> <br>
+<p>Whether this is your first time dining at a dining hall or you just wanna know which dining hall is the closest to you, view the locations of the Dining Halls below.</p>
+
+<select name="Locations" id="location" class="location" onchange="myFunction()">
+    <option value="Locations">Locations</option>
+    <option value="Bolton">Bolton</option>
+    <option value="The Niche">The Niche</option>
+    <option value="Oglethorpe">Oglethorpe</option>
+    <option value="Snelling">Snelling</option>
+    <option value="Village Summit">Village Summit</option>    
+</select>
+<br> <br>
+<img id="HallImage"></img>
+<p id="demo"></p>
+</body>
+<script>
+  
+    function myFunction() {
+        var x = document.getElementById("location").value;
+      console.log(document.getElementById("location").value);
+      if (x==="Locations"){
+          document.getElementById("demo").innerHTML = "";
+          document.getElementById("HallImage").src = ""; 
+          
+      }
+      
+      if (x==="Bolton") {
+          document.getElementById("demo").innerHTML = "790 S Lumpkin Street, Athens, Ga";
+          document.getElementById("HallImage").src = "BoltonImage.jpg"; 
+      }
+      
+      if (x==="The Niche") {
+           document.getElementById("demo").innerHTML = "Scott Hall, Scott Hall, University of Georgia Health Sciences Campus, Athens, Ga";
+           document.getElementById("HallImage").src = "TheNicheImage.jpg"; 
+      }
+     
+      if (x==="Oglethorpe") {
+          document.getElementById("demo").innerHTML = "160 University Ct, Athens, Ga";
+          document.getElementById("HallImage").src = "OglethorpeImage.jpg"; 
+          //document.getElementById("HallImage").width = "200px";
+      }
+      
+      if (x==="Snelling") {
+           document.getElementById("demo").innerHTML = "200 W Green Street, Athens, Ga";
+           document.getElementById("HallImage").src = "SnellingImage.jpg"; 
+      }
+     
+      if (x==="Village Summit"){
+          document.getElementById("demo").innerHTML = "80 Carlton Street, Athens, Ga";
+          document.getElementById("HallImage").src = "VillageSummitImage.jpg";
+      }
+      
+
+    }
+</script>
+
